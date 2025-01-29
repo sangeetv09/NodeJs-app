@@ -22,3 +22,18 @@ spec:
         - containerPort: 80
       imagePullSecrets:
       - name: dockercred
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: nodejs
+  ports:
+    - name: nodejs
+      protocol: TCP
+      port: 80
+      targetPort: 80
