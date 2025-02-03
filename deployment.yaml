@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nodejs
-        image: venkateshvgs/nodejs-app:latest
+        image: venkateshvgs/nodejs-app:v1
         ports:
         - containerPort: 80
       imagePullSecrets:
